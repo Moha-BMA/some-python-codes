@@ -21,7 +21,7 @@ A small collection of Python projects that are added to this repository one by o
 
 - Folder: `Random Word game`
 - Main file: `Random Word game/RandomWordGame.py`
-- Status: Coming next
+- Status: Available now
 - Summary: A console word guessing game inspired by Hangman.
 - Highlights:
   - Chooses a random word from a small built-in word bank.
@@ -34,7 +34,7 @@ A small collection of Python projects that are added to this repository one by o
 
 - Folder: `Search Engine`
 - Main file: `Search Engine/ExaEngine.py`
-- Status: Coming later
+- Status: Coming next
 - Summary: A command-line search example built with the Exa API.
 - Highlights:
   - Prompts the user for a search query.
