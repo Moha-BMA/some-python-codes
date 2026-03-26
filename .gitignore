@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.publish_logs/
+setup_daily_publish_task.ps1
+Thumbs.db
+Desktop.ini
