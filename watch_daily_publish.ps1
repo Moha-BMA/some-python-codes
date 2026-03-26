@@ -3,7 +3,7 @@ param(
 )
 
 $mutexCreated = $false
-$mutex = New-Object System.Threading.Mutex($true, "Local\\SomePythonCodesDailyPublishWatcher", [ref]$mutexCreated)
+$mutex = New-Object System.Threading.Mutex($true, "Local\SomePythonCodesDailyPublishWatcher", [ref]$mutexCreated)
 
 if (-not $mutexCreated) {
     Write-Host "The daily publish watcher is already running."
