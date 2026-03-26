@@ -1,24 +1,14 @@
 # Some Python Codes
 
-A growing collection of small Python projects. This repository is published gradually,
-with one project added per day by the automation scripts in this repo.
+A small collection of Python projects that are added to this repository one by one.
 
-## Publishing Roadmap
-
-| Order | Project | Folder | Main file | Status |
-| --- | --- | --- | --- | --- |
-| 1 | Caesar Encryption | `Cesar_encryption` | `Cesar_encryption/cesar.py` | Published |
-| 2 | Random Word Game | `Random Word game` | `Random Word game/RandomWordGame.py` | Next in queue |
-| 3 | Search Engine | `Search Engine` | `Search Engine/ExaEngine.py` | Queued |
-| 4 | Discord Chatbot | `discord_chatbot` | `discord_chatbot/discord vhatbot.py` | Queued |
-| 5 | YouTube Video Downloader | `youtube_video_downloader` | `youtube_video_downloader/YT.py` | Queued |
-
-## Published Projects
+## Projects
 
 ### 1. Caesar Encryption
 
 - Folder: `Cesar_encryption`
 - Main file: `Cesar_encryption/cesar.py`
+- Status: Available now
 - Summary: A simple Caesar cipher example that shifts alphabetic text while keeping punctuation unchanged.
 - Highlights:
   - Supports both uppercase and lowercase letters.
@@ -27,23 +17,59 @@ with one project added per day by the automation scripts in this repo.
 - Requirements:
   - Python 3
 
-## Automation
+### 2. Random Word Game
 
-- `daily_github_pusher.py` publishes the next unpublished project, regenerates this
-  README, commits the changes, and pushes them to `origin/main`.
-- `run_daily_publish.ps1` runs the publisher and stores a log file in
-  `.publish_logs/`.
-- `watch_daily_publish.ps1` is a lightweight watcher that can stay running in the
-  background and trigger one publish attempt per day.
+- Folder: `Random Word game`
+- Main file: `Random Word game/RandomWordGame.py`
+- Status: Coming next
+- Summary: A console word guessing game inspired by Hangman.
+- Highlights:
+  - Chooses a random word from a small built-in word bank.
+  - Shows progress after every guess and tracks remaining attempts.
+  - Ends with either a victory message or the correct answer when attempts run out.
+- Requirements:
+  - Python 3
 
-## Manual Commands
+### 3. Search Engine
 
-```powershell
-python .\daily_github_pusher.py --dry-run
-python .\daily_github_pusher.py --refresh-readme-only
-.\run_daily_publish.ps1
-.\watch_daily_publish.ps1
-```
+- Folder: `Search Engine`
+- Main file: `Search Engine/ExaEngine.py`
+- Status: Coming later
+- Summary: A command-line search example built with the Exa API.
+- Highlights:
+  - Prompts the user for a search query.
+  - Fetches up to five keyword-based search results.
+  - Currently filters results to the Netflix domain as a focused demo.
+- Requirements:
+  - Python 3
+  - exa-py
+  - An Exa API key
 
-The publish step uses your local git credentials, so the repository must exist on
-GitHub and your machine must already be able to push to `origin`.
+### 4. Discord Chatbot
+
+- Folder: `discord_chatbot`
+- Main file: `discord_chatbot/discord vhatbot.py`
+- Status: Coming later
+- Summary: A starter Discord bot configured with a command prefix and message intents.
+- Highlights:
+  - Creates a bot with the '!' command prefix.
+  - Enables basic message intents so the bot can respond to server activity.
+  - Provides a minimal foundation for adding commands and events.
+- Requirements:
+  - Python 3
+  - discord.py
+  - A Discord bot token
+
+### 5. YouTube Video Downloader
+
+- Folder: `youtube_video_downloader`
+- Main file: `youtube_video_downloader/YT.py`
+- Status: Coming later
+- Summary: A utility that downloads a YouTube video with yt-dlp.
+- Highlights:
+  - Accepts a YouTube URL and an optional output folder.
+  - Downloads the best video stream up to 1080p and shows progress updates.
+  - Prints the saved file path after the download finishes.
+- Requirements:
+  - Python 3
+  - yt-dlp
