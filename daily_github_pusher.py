@@ -4,6 +4,7 @@ import argparse
 import json
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 
@@ -187,6 +188,22 @@ def has_staged_changes() -> bool:
     return result.returncode != 0
 
 
+def get_last_publish_date() -> date | None:
+    result = run_git(
+        "log",
+        "--date=short",
+        "--format=%ad",
+        "--grep=^feat: publish ",
+        "-n",
+        "1",
+        check=False,
+    )
+    output = result.stdout.strip()
+    if not output:
+        return None
+    return date.fromisoformat(output.splitlines()[0])
+
+
 def refresh_readme_only(dry_run: bool) -> int:
     manifest = load_manifest()
     published_paths = {str(project["path"]) for project in get_published_projects(manifest)}
@@ -203,6 +220,13 @@ def refresh_readme_only(dry_run: bool) -> int:
 
 def publish_next_project(skip_push: bool, dry_run: bool) -> int:
     manifest = load_manifest()
+    last_publish_date = get_last_publish_date()
+
+    if last_publish_date == date.today():
+        print(f"A project was already published on {last_publish_date.isoformat()}.")
+        print("Skipping this run to keep the one-project-per-day schedule.")
+        return 0
+
     next_project = get_next_project(manifest)
     published_paths = {str(project["path"]) for project in get_published_projects(manifest)}
 
