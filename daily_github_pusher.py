@@ -17,6 +17,7 @@ BASE_TRACKED_FILES = [
     "projects_manifest.json",
     "daily_github_pusher.py",
     "run_daily_publish.ps1",
+    "watch_daily_publish.ps1",
 ]
 
 
@@ -137,8 +138,8 @@ def build_readme(
             "  README, commits the changes, and pushes them to `origin/main`.",
             "- `run_daily_publish.ps1` runs the publisher and stores a log file in",
             "  `.publish_logs/`.",
-            "- A Windows scheduled task can be registered once so `run_daily_publish.ps1` runs",
-            "  automatically every day.",
+            "- `watch_daily_publish.ps1` is a lightweight watcher that can stay running in the",
+            "  background and trigger one publish attempt per day.",
             "",
             "## Manual Commands",
             "",
@@ -146,6 +147,7 @@ def build_readme(
             "python .\\daily_github_pusher.py --dry-run",
             "python .\\daily_github_pusher.py --refresh-readme-only",
             ".\\run_daily_publish.ps1",
+            ".\\watch_daily_publish.ps1",
             "```",
             "",
             "The publish step uses your local git credentials, so the repository must exist on",

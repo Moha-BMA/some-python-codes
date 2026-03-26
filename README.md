@@ -33,8 +33,8 @@ with one project added per day by the automation scripts in this repo.
   README, commits the changes, and pushes them to `origin/main`.
 - `run_daily_publish.ps1` runs the publisher and stores a log file in
   `.publish_logs/`.
-- A Windows scheduled task can be registered once so `run_daily_publish.ps1` runs
-  automatically every day.
+- `watch_daily_publish.ps1` is a lightweight watcher that can stay running in the
+  background and trigger one publish attempt per day.
 
 ## Manual Commands
 
@@ -42,6 +42,7 @@ with one project added per day by the automation scripts in this repo.
 python .\daily_github_pusher.py --dry-run
 python .\daily_github_pusher.py --refresh-readme-only
 .\run_daily_publish.ps1
+.\watch_daily_publish.ps1
 ```
 
 The publish step uses your local git credentials, so the repository must exist on
