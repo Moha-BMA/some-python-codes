@@ -34,7 +34,7 @@ A small collection of Python projects that are added to this repository one by o
 
 - Folder: `Search Engine`
 - Main file: `Search Engine/ExaEngine.py`
-- Status: Coming next
+- Status: Available now
 - Summary: A command-line search example built with the Exa API.
 - Highlights:
   - Prompts the user for a search query.
@@ -49,7 +49,7 @@ A small collection of Python projects that are added to this repository one by o
 
 - Folder: `discord_chatbot`
 - Main file: `discord_chatbot/discord vhatbot.py`
-- Status: Coming later
+- Status: Coming next
 - Summary: A starter Discord bot configured with a command prefix and message intents.
 - Highlights:
   - Creates a bot with the '!' command prefix.
