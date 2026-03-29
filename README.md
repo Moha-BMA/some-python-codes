@@ -49,7 +49,7 @@ A small collection of Python projects that are added to this repository one by o
 
 - Folder: `discord_chatbot`
 - Main file: `discord_chatbot/discord vhatbot.py`
-- Status: Coming next
+- Status: Available now
 - Summary: A starter Discord bot configured with a command prefix and message intents.
 - Highlights:
   - Creates a bot with the '!' command prefix.
@@ -64,7 +64,7 @@ A small collection of Python projects that are added to this repository one by o
 
 - Folder: `youtube_video_downloader`
 - Main file: `youtube_video_downloader/YT.py`
-- Status: Coming later
+- Status: Coming next
 - Summary: A utility that downloads a YouTube video with yt-dlp.
 - Highlights:
   - Accepts a YouTube URL and an optional output folder.
